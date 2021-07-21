@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="EasySave.View.DeleteSave"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasySave.View" xmlns:vm="clr-namespace:EasySave.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid x:Name="manageSave" HorizontalAlignment="Center" Width="600" Background="LightGray">
+        <Grid.DataContext >
+            <vm:DeleteViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Label Name="lblList" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" 
+               HorizontalContentAlignment="Center" FontWeight="DemiBold"/>
+        <ListBox Name ="test" Grid.Row="2" Grid.Column="1" Grid.RowSpan="6" Margin="10,5,10,5" 
+                 ItemsSource="{Binding Path=ListSave, UpdateSourceTrigger=PropertyChanged}" 
+                 SelectedItem="{Binding Path=SelectedSave}" BorderBrush="Black"/>
+        <Button Name="btnDelete"  Width="100" Height="40" Grid.Row="4" Grid.Column="3" Grid.RowSpan="2"
+                HorizontalContentAlignment="Left" FontWeight="DemiBold" FontSize="14"
+                HorizontalAlignment="Center" Cursor="Hand"
+                Command="{Binding Path=DeleteSave}"/>
+    </Grid>
+</UserControl>

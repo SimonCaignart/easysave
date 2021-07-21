@@ -1,5 +1,3 @@
-# Easy Save
-
 # Introduction
 EasySave project second group of CESI La Rochelle.
 
@@ -9,15 +7,11 @@ Joana Cazaurang, developer,<br />
 Simon Caignart, developer,<br />
 Théo Jeanney, developer.
 
+# Find the correct program version
+Linux: EasySave>EasySave
+Windows: EasySave>EasySave.exe
+
 # Release Notes
-### Version 2.0
-
-•	Graphic interface! <br />
-•	Unlimited saves! <br />
-•	Added crypted file info to the log files. <br />
-•	You can now select work software - is this software is running you won't be able to save!<br />
-•	Software now runs with CryptoSoft to protect your saves! <br />
-
 ### Version 1.0
 
 •	Add a console interface <br />

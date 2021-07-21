@@ -10,11 +10,11 @@
 *.userosscache
 *.sln.docstates
 
+
+
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
-# Mono auto generated files
-mono_crash.*
 
 # Build results
 [Dd]ebug/
@@ -29,10 +29,15 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+../.obj/
+../.bin/
+
+**/.vs/
+**/obj/
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -43,10 +48,9 @@ Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-# NUnit
+# NUNIT
 *.VisualState.xml
 TestResult.xml
-nunit-*.xml
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
@@ -127,6 +131,9 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
+# JustCode is a .NET coding add-in
+.JustCode
+
 # TeamCity is a build add-in
 _TeamCity*
 
@@ -184,8 +191,6 @@ PublishScripts/
 
 # NuGet Packages
 *.nupkg
-# NuGet Symbol Packages
-*.snupkg
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
@@ -210,8 +215,6 @@ BundleArtifacts/
 Package.StoreAssociation.xml
 _pkginfo.txt
 *.appx
-*.appxbundle
-*.appxupload
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
@@ -233,6 +236,12 @@ orleans.codegen.cs
 # Including strong name files can present a security risk
 # (https://github.com/github/gitignore/pull/2483#issue-259490424)
 #*.snk
+
+/obj/
+.vs/
+obj/
+/.vs/
+.vs/EasySave/v16
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
@@ -261,9 +270,7 @@ ServiceFabricBackup/
 *.bim.layout
 *.bim_*.settings
 *.rptproj.rsuser
-*- [Bb]ackup.rdl
-*- [Bb]ackup ([0-9]).rdl
-*- [Bb]ackup ([0-9][0-9]).rdl
+*- Backup*.rdl
 
 # Microsoft Fakes
 FakesAssemblies/
@@ -298,6 +305,10 @@ paket-files/
 
 # FAKE - F# Make
 .fake/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
 
 # CodeRush personal settings
 .cr/personal
@@ -343,8 +354,16 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
-# Backup folder for Package Reference Convert tool in Visual Studio 2017
-MigrationBackup/
-
-# Ionide (cross platform F# VS Code tools) working folder
-.ionide/
+# Manually added files
+.vs/EasySave-Grp2/v16/.suo
+.vs/slnx.sqlite
+EasySave/obj/Debug/netcoreapp3.1/EasySave.AssemblyInfo.cs
+EasySave/obj/Debug/netcoreapp3.1/EasySave.assets.cache
+EasySave/obj/Debug/netcoreapp3.1/EasySave.csprojAssemblyReference.cache
+EasySave/obj/EasySave.csproj.nuget.dgspec.json
+EasySave/obj/EasySave.csproj.nuget.g.props
+EasySave/obj/Release/netcoreapp3.1/EasySave.AssemblyInfo.cs
+EasySave/obj/Release/netcoreapp3.1/EasySave.assets.cache
+EasySave/obj/project.assets.json
+EasySave/obj/project.nuget.cache
+/.vscode/launch.json

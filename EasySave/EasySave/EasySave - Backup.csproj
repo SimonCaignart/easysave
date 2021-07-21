@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AppDesignerFolder>Languages</AppDesignerFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="User_Controls\**" />
+    <EmbeddedResource Remove="User_Controls\**" />
+    <None Remove="User_Controls\**" />
+    <Page Remove="User_Controls\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="EasySave.png" />
+    <None Remove="France.png" />
+    <None Remove="Pictures\EasySave.png" />
+    <None Remove="Pictures\France.png" />
+    <None Remove="Pictures\UK.png" />
+    <None Remove="quit.png" />
+    <None Remove="settings.png" />
+    <None Remove="UK.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\EasySave.png" />
+    <Resource Include="Pictures\France.png" />
+    <Resource Include="Pictures\UK.png" />
+    <Resource Include="Pictures\settings.png" />
+    <Resource Include="Pictures\quit.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Languages\en_language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>en_language.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Languages\fr_language.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>fr_language.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Languages\en_language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>en_language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Languages\fr_language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>fr_language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

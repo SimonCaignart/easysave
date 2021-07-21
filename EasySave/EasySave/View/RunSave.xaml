@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="EasySave.View.RunSave"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasySave.View" xmlns:vm="clr-namespace:EasySave.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid x:Name="runSave" HorizontalAlignment="Center" Width="600" Background="LightGray">
+        <Grid.DataContext >
+            <vm:ManageViewModel/>
+        </Grid.DataContext>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Label Name="lblList" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" 
+               HorizontalContentAlignment="Center" FontWeight="DemiBold" VerticalContentAlignment="Bottom"/>
+        <ListBox Grid.Row="2" Grid.Column="1" Grid.RowSpan="6" Margin="10,5,10,5" BorderBrush="Black"  
+                 ItemsSource="{Binding Path=ListSave}" SelectedItem="{Binding Path=SelectedSave}">
+        </ListBox>
+             
+        <Button Grid.Row="1" Grid.Column="3" Command="{Binding Path=PlayThread}"
+                Background="Black" Foreground="White" BorderBrush="Transparent"
+                HorizontalContentAlignment="Center" FontWeight="DemiBold" Cursor="Hand" Content="Play"
+                Name="btnPlay" Margin="5,5,5,5" Padding="5,0,5,0"/>
+
+        <Button Grid.Row="2" Grid.Column="3" Command="{Binding Path=PauseThread}"
+                Background="Black" Foreground="White" BorderBrush="Transparent"
+                HorizontalContentAlignment="Center" FontWeight="DemiBold" Cursor="Hand"
+                Name="btnPause" Margin="5,5,5,5" Padding="5,0,5,0" Content="Pause"/>
+
+        <Button Grid.Row="3" Grid.Column="3"
+                Background="Black" Foreground="White" BorderBrush="Transparent" Command="{Binding Path=StopThread}"
+                HorizontalContentAlignment="Center" FontWeight="DemiBold" Cursor="Hand"
+                Name="btnStop" Margin="5,5,5,5" Padding="5,0,5,0" Content="Stop"/>
+
+        <Button Grid.Row="4" Grid.Column="3" Command="{Binding Path=RunAllSave}"
+                Background="Black" Foreground="White" BorderBrush="Transparent"
+                HorizontalContentAlignment="Center" FontWeight="DemiBold" Cursor="Hand"
+                Name="btnRunAll" Margin="5,5,5,5" FontSize="14" Padding="5,0,5,0"/>
+
+        <Button Grid.Row="5" Grid.Column="3" Command="{Binding Path=RunSelectedSave}"
+                HorizontalContentAlignment="Center" FontWeight="DemiBold" Cursor="Hand"
+                Name="btnRunSpecific" Margin="5,5,5,5" FontSize="14" Padding="5,0,5,0"/>
+    </Grid>
+</UserControl>

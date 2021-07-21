@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AppDesignerFolder>Languages</AppDesignerFolder>
+    <ApplicationIcon>Pictures\EasySave.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FakesAssemblies\**" />
+    <Compile Remove="User_Controls\**" />
+    <EmbeddedResource Remove="FakesAssemblies\**" />
+    <EmbeddedResource Remove="User_Controls\**" />
+    <None Remove="FakesAssemblies\**" />
+    <None Remove="User_Controls\**" />
+    <Page Remove="FakesAssemblies\**" />
+    <Page Remove="User_Controls\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="EasySave.png" />
+    <None Remove="France.png" />
+    <None Remove="Pictures\EasySave.png" />
+    <None Remove="Pictures\France.png" />
+    <None Remove="Pictures\settings.png" />
+    <None Remove="Pictures\UK.png" />
+    <None Remove="quit.png" />
+    <None Remove="settings.png" />
+    <None Remove="UK.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.QualityTools.Testing.Fakes" Version="16.7.4-beta.20330.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pictures\EasySave.png" />
+    <Resource Include="Pictures\France.png" />
+    <Resource Include="Pictures\settings.png" />
+    <Resource Include="Pictures\UK.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalDesignTimeBuildInput Remove="FakesAssemblies\**" />
+  </ItemGroup>
+
+</Project>
