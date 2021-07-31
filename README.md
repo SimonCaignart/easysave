@@ -1,5 +1,5 @@
 # Introduction
-EasySave project second group of CESI La Rochelle.
+EasySave project - CESI La Rochelle.
 
 # Team
 Maxim Wilmot, project lead,<br />
@@ -7,28 +7,4 @@ Joana Cazaurang, developer,<br />
 Simon Caignart, developer,<br />
 Théo Jeanney, developer.
 
-# Find the correct program version
-Linux: EasySave>EasySave
-Windows: EasySave>EasySave.exe
-
-# Release Notes
-### Version 1.0
-
-•	Add a console interface <br />
-•	You can change language before the main menu of the software.<br />
-•	You can create five saves maximum.<br />
-•	You can delete a save.<br />
-•	You can run a specific save among a list.<br />
-•	You can run all saves.<br />
-•	You can see a list of all saves.<br />
-•	You can leave the software.<br />
-•	Add log when a save is launch.<br />
-•	Add state file to show the information about the save work.<br />
-
-# Use case
-EasySave for the time being is a console program that allows you to create up to 5 saves and manage them.<br />
-Managing these saves implies re-saving after edits, deleting saves, viewing saves.<br />
-
-# Future versions
-Future versions will include a graphic user interface (GUI).
-
+EasySave is a program that allows you to create up to 5 saves and manage them.<br />
