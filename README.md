@@ -5,13 +5,13 @@
 
 EasySave is a program that allows you to create up to 5 saves and manage them.<br />
 
-## Team
+# Team
 Maxim Wilmot, project lead,<br />
 Joana Cazaurang, developer,<br />
 Simon Caignart, developer,<br />
 Théo Jeanney, developer.
 
-## Screenshots
+# Screenshots
 
 ![image](https://user-images.githubusercontent.com/44498056/128493062-c1dbc9af-e8ed-4b91-9994-fb9f66bf11ca.png)
 
